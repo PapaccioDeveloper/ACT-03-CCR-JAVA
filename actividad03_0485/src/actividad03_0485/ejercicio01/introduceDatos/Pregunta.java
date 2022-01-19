@@ -8,6 +8,8 @@ package actividad03_0485.ejercicio01.introduceDatos;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 /**
  *
@@ -22,7 +24,6 @@ public class Pregunta {
          System.out.println(pidedouble("jamaica existe?"));
     }
      */
-
     public static int pideEntero(String pregunta) throws IOException {
 
         System.out.println("La pregunta es: " + pregunta);
@@ -53,12 +54,12 @@ public class Pregunta {
         double lectura = 0.0;
         while (x) {
             System.out.println("Introduce un número");
-            BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+            Scanner read = new Scanner(System.in); //Se crea el lector
 
             try {
-                lectura = Double.parseDouble(read.readLine());
+                lectura = read.nextDouble();
                 x = false;
-            } catch (NumberFormatException nfe) {
+            } catch (InputMismatchException nfe) {
                 System.out.println("Solamente puedes escribir números");
             }
         }
