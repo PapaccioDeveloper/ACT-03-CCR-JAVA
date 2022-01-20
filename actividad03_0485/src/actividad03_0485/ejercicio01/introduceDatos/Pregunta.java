@@ -26,7 +26,7 @@ public class Pregunta {
      */
     public static int pideEntero(String pregunta) throws IOException {
 
-        System.out.println("La pregunta es: " + pregunta);
+        System.out.println(pregunta);
 
         boolean x = true;
         int lectura = 0;
@@ -48,7 +48,7 @@ public class Pregunta {
 
     public static double pidedouble(String pregunta) throws IOException {
 
-        System.out.println("La pregunta es: " + pregunta);
+        System.out.println(" " + pregunta);
 
         boolean x = true;
         double lectura = 0.0;
@@ -61,6 +61,7 @@ public class Pregunta {
                 x = false;
             } catch (InputMismatchException nfe) {
                 System.out.println("Solamente puedes escribir números");
+                System.out.println("Y si es con decimales UNA LA COMA , ");
             }
         }
 
